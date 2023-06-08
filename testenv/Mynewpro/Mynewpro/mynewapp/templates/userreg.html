@@ -1,0 +1,45 @@
+{% extends 'index.html' %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% block pagecontent %}
+<form action="/userdata/" method="post">
+    {% csrf_token %}
+<center>
+    <h2>User Registration</h2>
+    <br>
+    <table border="solid">
+        <tr>
+            <td>Name</td>
+            <td><input type="text" name="name"></td>
+        </tr>
+        <tr>
+            <td>Username</td>
+            <td><input type="text" name="uname"></td>
+        </tr>
+        <tr>
+            <td>Password</td>
+            <td><input type="password" name="pwd"></td>
+        </tr>
+        <tr>
+            <td>Age</td>
+            <td><input type="text" name="age"></td>
+        </tr>
+        <tr>
+            <td>Email</td>
+            <td><input type="email" name="email"></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><input type="Submit" value="Save"></td>
+        </tr>
+    </table>
+</center>
+</form>
+{% endblock %}
+</body>
+</html>
